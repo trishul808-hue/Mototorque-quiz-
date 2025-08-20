@@ -1,0 +1,50 @@
+:root{
+  --bg:#0f1419;
+  --card:#14181c;
+  --text:#e9eef3;
+  --muted:#9fb3c8;
+  --accent:#00a5ff;
+  --good:#27c93f;
+  --bad:#ff3b30;
+  --xp:#f7b500;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:900px;margin:0 auto;padding:24px}
+header{
+  display:flex;align-items:center;gap:12px;margin-bottom:24px
+}
+header img{width:40px;height:40px;border-radius:12px}
+header h1{font-size:1.4rem;margin:0}
+header .tag{font-size:.9rem;color:var(--muted)}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;padding:16px 16px 20px 16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.grow{flex:1 1 280px}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+select,button{
+  background:var(--card); color:var(--text); border:1px solid rgba(255,255,255,.1);
+  border-radius:12px; padding:10px 12px; font-size:1rem;
+}
+button.primary{background:var(--accent);color:black;border:none;font-weight:700}
+#question{font-size:1.1rem;margin:10px 0 12px}
+.answers{display:grid;grid-template-columns:1fr;gap:10px}
+.answer{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:12px;cursor:pointer;
+  transition:transform .08s ease, border-color .2s ease;
+}
+.answer:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.25)}
+.answer.correct{border-color:var(--good)}
+.answer.wrong{border-color:var(--bad)}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted)}
+.xp{font-weight:700}
+.pill{padding:6px 10px;border-radius:999px;background:var(--card);border:1px solid rgba(255,255,255,.08)}
+footer{margin-top:28px;color:var(--muted);font-size:.9rem;text-align:center}
+.hidden{display:none !important}

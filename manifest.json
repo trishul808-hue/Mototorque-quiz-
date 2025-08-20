@@ -1,0 +1,23 @@
+{
+  "name": "AutoIQ: Ultimate Vehicles Quiz",
+  "short_name": "AutoIQ",
+  "description": "A fast, installable PWA quiz app covering cars, bikes, planes and trains\u2014engines, specs, brands, and market performance.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14181C",
+  "theme_color": "#00A5FF",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

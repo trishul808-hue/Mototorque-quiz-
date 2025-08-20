@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoIQ • Ultimate Vehicles Quiz (PWA)</title>
+  <meta name="theme-color" content="#00A5FF" />
+  <meta name="description" content="Quiz yourself on engines, specs, brands, and market performance for cars, bikes, planes, and trains." />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="./assets/icon-192.png" alt="AutoIQ Logo" />
+      <div>
+        <h1>AutoIQ: Ultimate Vehicles Quiz</h1>
+        <div class="tag">Cars • Bikes • Planes • Trains</div>
+      </div>
+    </header>
+
+    <div id="homeScreen" class="card">
+      <div class="row">
+        <div class="grow">
+          <div class="controls">
+            <label for="category">Category</label>
+            <select id="category">
+              <option>All</option>
+              <option>Cars</option>
+              <option>Bikes</option>
+              <option>Planes</option>
+              <option>Trains</option>
+              <option>Market</option>
+              <option>Engines</option>
+            </select>
+
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+              <option>All</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+
+            <button class="primary" id="play">Start Quiz</button>
+            <span id="best" class="pill">Best: —</span>
+          </div>
+          <p>Answer correctly to earn <b>🚘 1 XP</b> each. Watch for <b>✅</b> on correct answers and <b>❌</b> on wrong ones. Install the app to your homescreen for an offline, app‑like experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz" class="row" style="margin-top:16px"></div>
+
+    <footer>
+      <p>Made with ❤️ for learning. This is a progressive web app (PWA) that works offline.</p>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+  <script>
+    document.getElementById('play').addEventListener('click', () => {
+      document.getElementById('homeScreen').classList.add('hidden');
+      startQuiz();
+    });
+  </script>
+</body>
+</html>
